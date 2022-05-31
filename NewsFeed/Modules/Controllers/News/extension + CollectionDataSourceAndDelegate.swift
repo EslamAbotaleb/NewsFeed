@@ -16,7 +16,10 @@ extension NewsFeedViewController:UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
         case 0: return 4
-        case 1: return 5
+        case 1:
+            let articles = Array(self.articleList)
+            return articles.slice(size: 15).count - 1
+            
         case 2 : return 6
         default: return 0
         }
@@ -46,14 +49,15 @@ extension NewsFeedViewController:UICollectionViewDataSource, UICollectionViewDel
             guard let cell = newsCollectionView.dequeueReusableCell(withReuseIdentifier: LatestNewsCollectionViewCell.reuseIdentifier, for: indexPath) as? LatestNewsCollectionViewCell else {
                 fatalError("Not found stock cell")
             }
-            cell.backgroundColor = .orange
+            let slicedLatestNewsArticle = self.articleList[0...5]
+            let article = Array(slicedLatestNewsArticle)[indexPath.row]
+            cell.configure(article)
             return cell
         case .moreNews:
             guard let cell = newsCollectionView.dequeueReusableCell(withReuseIdentifier: MoreNewsCollectionViewCell.reuseIdentifier, for: indexPath) as? MoreNewsCollectionViewCell else {
                 fatalError("Not found stock cell")
             }
             
-//            cell.backgroundColor = .gray
             return cell
         }
     }

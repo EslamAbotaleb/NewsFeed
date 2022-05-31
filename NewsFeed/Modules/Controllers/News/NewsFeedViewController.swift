@@ -18,7 +18,8 @@ class NewsFeedViewController: UIViewController {
      }
      
      private var NewsFeedDataSource: UICollectionViewDiffableDataSource<NewsFeedSection,Article>?
-     
+     var newsFeedVM: NewsFeedViewModel?
+    var articleList: [Article] = [Article]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,19 @@ class NewsFeedViewController: UIViewController {
         newsCollectionView.delegate = self
         registerCells()
         newsCollectionView.collectionViewLayout = setupCollectionViewLayout()
+        
+        newsFeedVM = NewsFeedViewModel()
+             newsFeedVM?.displayNewsFeed(completion: { [weak self] news in
+                 if news != nil {
+                     print(news?.status ?? "")
+                     self?.articleList = (news?.articles)!
+                     DispatchQueue.main.async {
+                         self?.newsCollectionView.reloadData()
+                     }
+                 }
+             })
+         
+        
     }
     
     

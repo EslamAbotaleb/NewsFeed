@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,7 +18,32 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jlk-Iz-fHc">
                         <rect key="frame" x="0.0" y="0.0" width="395" height="264"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZTI-i7-djV">
+                                <rect key="frame" x="0.0" y="4" width="395" height="256"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kM1-XA-eSX">
+                                        <rect key="frame" x="0.0" y="0.0" width="395" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" id="m9Z-hz-9qI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z3g-da-DzE">
+                                        <rect key="frame" x="0.0" y="28.5" width="395" height="227.5"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ZTI-i7-djV" secondAttribute="bottom" constant="4" id="Bok-Qz-I4k"/>
+                            <constraint firstItem="ZTI-i7-djV" firstAttribute="leading" secondItem="jlk-Iz-fHc" secondAttribute="leading" id="FzV-GB-SzY"/>
+                            <constraint firstItem="ZTI-i7-djV" firstAttribute="top" secondItem="jlk-Iz-fHc" secondAttribute="top" constant="4" id="hpt-JD-8VO"/>
+                            <constraint firstAttribute="trailing" secondItem="ZTI-i7-djV" secondAttribute="trailing" id="lQa-sN-Mcd"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -31,12 +55,11 @@
                 <constraint firstItem="jlk-Iz-fHc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tYP-yW-4y6"/>
             </constraints>
             <size key="customSize" width="395" height="264"/>
-            <point key="canvasLocation" x="178.98550724637681" y="201.5625"/>
+            <connections>
+                <outlet property="imgNews" destination="z3g-da-DzE" id="a6T-4b-VK0"/>
+                <outlet property="titleNewsLbL" destination="kM1-XA-eSX" id="vu7-IB-T1x"/>
+            </connections>
+            <point key="canvasLocation" x="-2" y="127"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>
