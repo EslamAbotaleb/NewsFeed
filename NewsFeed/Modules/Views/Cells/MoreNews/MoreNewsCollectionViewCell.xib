@@ -4,22 +4,51 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MoreNewsCollectionViewCell" id="gTV-IL-0wX" customClass="MoreNewsCollectionViewCell" customModule="NewsFeed" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="300" height="301"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="301"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="300" height="301"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="301"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dG9-5A-n36">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="301"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="301"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yHw-N7-rQu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="301"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="84E-3e-9aM">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="275.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMb-si-DoC">
+                                        <rect key="frame" x="0.0" y="280.5" width="375" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" id="28l-So-EK5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="AMb-si-DoC" secondAttribute="trailing" id="JO3-yD-xAB"/>
+                                    <constraint firstAttribute="bottom" secondItem="AMb-si-DoC" secondAttribute="bottom" id="cXK-48-icA"/>
+                                    <constraint firstItem="AMb-si-DoC" firstAttribute="leading" secondItem="yHw-N7-rQu" secondAttribute="leading" id="ltf-Ps-bq1"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yHw-N7-rQu" firstAttribute="top" secondItem="dG9-5A-n36" secondAttribute="top" id="EVR-2i-BGl"/>
+                            <constraint firstAttribute="bottom" secondItem="yHw-N7-rQu" secondAttribute="bottom" id="dZ8-on-TD4"/>
+                            <constraint firstItem="yHw-N7-rQu" firstAttribute="leading" secondItem="dG9-5A-n36" secondAttribute="leading" id="iRc-hN-Y3L"/>
+                            <constraint firstAttribute="trailing" secondItem="yHw-N7-rQu" secondAttribute="trailing" id="ony-70-rfU"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -30,13 +59,8 @@
                 <constraint firstItem="dG9-5A-n36" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YSr-Kr-1jS"/>
                 <constraint firstAttribute="trailing" secondItem="dG9-5A-n36" secondAttribute="trailing" id="fYp-KX-zaw"/>
             </constraints>
-            <size key="customSize" width="300" height="301"/>
-            <point key="canvasLocation" x="136.23188405797103" y="213.95089285714286"/>
+            <size key="customSize" width="375" height="301"/>
+            <point key="canvasLocation" x="190.57971014492756" y="213.95089285714286"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>
