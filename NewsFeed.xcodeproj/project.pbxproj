@@ -21,6 +21,7 @@
 		B79441D128465ACE00B60B00 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79441CF28465ACE00B60B00 /* NewsFeedViewController.swift */; };
 		B79441D228465ACE00B60B00 /* NewsFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79441D028465ACE00B60B00 /* NewsFeedViewController.xib */; };
 		B79441DB28465BD300B60B00 /* PersistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79441DA28465BD300B60B00 /* PersistanceService.swift */; };
+		B79441DE28465C7000B60B00 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79441DD28465C7000B60B00 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		B79441CF28465ACE00B60B00 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
 		B79441D028465ACE00B60B00 /* NewsFeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsFeedViewController.xib; sourceTree = "<group>"; };
 		B79441DA28465BD300B60B00 /* PersistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceService.swift; sourceTree = "<group>"; };
+		B79441DD28465C7000B60B00 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 		B79441D528465AF000B60B00 /* Buiness Manager */ = {
 			isa = PBXGroup;
 			children = (
+				B79441DC28465C6600B60B00 /* Constant */,
 				B79441D828465B4500B60B00 /* Online */,
 				B79441D728465B3D00B60B00 /* OfflineMode */,
 			);
@@ -198,6 +201,14 @@
 				B79441DA28465BD300B60B00 /* PersistanceService.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		B79441DC28465C6600B60B00 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				B79441DD28465C7000B60B00 /* Constants.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		F2BF0E9D80E3F408CD598CC8 /* Frameworks */ = {
@@ -329,6 +340,7 @@
 				B79441C32846506800B60B00 /* exetension + collectionviewcell.swift in Sources */,
 				B79441C52846508900B60B00 /* ReusableView.swift in Sources */,
 				B79441DB28465BD300B60B00 /* PersistanceService.swift in Sources */,
+				B79441DE28465C7000B60B00 /* Constants.swift in Sources */,
 				B79441C82846512900B60B00 /* extesnion + reusable.swift in Sources */,
 				B76C9D83284647EA00A04379 /* NewsFeed.xcdatamodeld in Sources */,
 				B76C9D7B284647EA00A04379 /* SceneDelegate.swift in Sources */,
