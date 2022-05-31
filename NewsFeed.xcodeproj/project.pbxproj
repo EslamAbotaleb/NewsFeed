@@ -20,6 +20,7 @@
 		B79441C82846512900B60B00 /* extesnion + reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79441C72846512900B60B00 /* extesnion + reusable.swift */; };
 		B79441D128465ACE00B60B00 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79441CF28465ACE00B60B00 /* NewsFeedViewController.swift */; };
 		B79441D228465ACE00B60B00 /* NewsFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79441D028465ACE00B60B00 /* NewsFeedViewController.xib */; };
+		B79441DB28465BD300B60B00 /* PersistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79441DA28465BD300B60B00 /* PersistanceService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		B79441C72846512900B60B00 /* extesnion + reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extesnion + reusable.swift"; sourceTree = "<group>"; };
 		B79441CF28465ACE00B60B00 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
 		B79441D028465ACE00B60B00 /* NewsFeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsFeedViewController.xib; sourceTree = "<group>"; };
+		B79441DA28465BD300B60B00 /* PersistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				B76C9D81284647EA00A04379 /* NewsFeed.xcdatamodeld */,
+				B79441DA28465BD300B60B00 /* PersistanceService.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				B76C9D79284647EA00A04379 /* AppDelegate.swift in Sources */,
 				B79441C32846506800B60B00 /* exetension + collectionviewcell.swift in Sources */,
 				B79441C52846508900B60B00 /* ReusableView.swift in Sources */,
+				B79441DB28465BD300B60B00 /* PersistanceService.swift in Sources */,
 				B79441C82846512900B60B00 /* extesnion + reusable.swift in Sources */,
 				B76C9D83284647EA00A04379 /* NewsFeed.xcdatamodeld in Sources */,
 				B76C9D7B284647EA00A04379 /* SceneDelegate.swift in Sources */,
