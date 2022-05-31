@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SVProgressHUD
 
 class NewsFeedViewController: UIViewController {
 
@@ -22,18 +22,17 @@ class NewsFeedViewController: UIViewController {
      var newsFeedVM: NewsFeedViewModel?
      var articleList: [Article] = [Article]()
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+
         newsCollectionView.dataSource = self
         newsCollectionView.delegate = self
         registerCells()
         newsCollectionView.collectionViewLayout = setupCollectionViewLayout()
         
         newsFeedVM = NewsFeedViewModel()
-             newsFeedVM?.displayNewsFeed(completion: { [weak self] news in
+
+        newsFeedVM?.displayNewsFeed(completion: { [weak self] news in
                  if news != nil {
                      print(news?.status ?? "")
                      self?.articleList = (news?.articles)!
@@ -42,8 +41,6 @@ class NewsFeedViewController: UIViewController {
                      }
                  }
              })
-         
-        
     }
     
     
@@ -61,10 +58,8 @@ class NewsFeedViewController: UIViewController {
     
 }
 
-
 //Helper
 extension NewsFeedViewController {
-
     
     func registerCells() {
         newsCollectionView.register(UINib(nibName: "StockCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: StockCollectionViewCell.reuseIdentifier)
@@ -73,7 +68,6 @@ extension NewsFeedViewController {
 
         newsCollectionView.register(UINib(nibName: "LatestNewsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: LatestNewsCollectionViewCell.reuseIdentifier)
 
-    
         newsCollectionView.register(UINib(nibName: "HeaderCollectionReusableView", bundle: nil),
                                     forSupplementaryViewOfKind:"header",
                                     withReuseIdentifier: "HeaderCollectionReusableView")
