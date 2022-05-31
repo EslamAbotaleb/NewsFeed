@@ -1,17 +1,18 @@
+////
+////  ViewController.swift
+////  NewsFeed
+////
+////  Created by Eslam Abotaleb on 31/05/2022.
+////
 //
-//  ViewController.swift
-//  NewsFeed
+//import UIKit
 //
-//  Created by Eslam Abotaleb on 31/05/2022.
+//class ViewController: UIViewController {
 //
-
-import UIKit
-
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-}
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        // Do any additional setup after loading the view.
+//        
+//    }
+//
+//}
