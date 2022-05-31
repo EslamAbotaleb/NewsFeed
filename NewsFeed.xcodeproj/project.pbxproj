@@ -43,6 +43,7 @@
 		B794420F2846B91200B60B00 /* extenstion + Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B794420E2846B91200B60B00 /* extenstion + Date.swift */; };
 		B79442162846CE9800B60B00 /* News+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79442142846CE9800B60B00 /* News+CoreDataClass.swift */; };
 		B79442172846CE9800B60B00 /* News+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79442152846CE9800B60B00 /* News+CoreDataProperties.swift */; };
+		B79442192846D0F800B60B00 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79442182846D0F800B60B00 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		B794420E2846B91200B60B00 /* extenstion + Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extenstion + Date.swift"; sourceTree = "<group>"; };
 		B79442142846CE9800B60B00 /* News+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "News+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		B79442152846CE9800B60B00 /* News+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "News+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		B79442182846D0F800B60B00 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				B794420A2846B08700B60B00 /* UIImageView+Cache.swift */,
 				B794420C2846B41F00B60B00 /* extenstion + Array.swift */,
 				B794420E2846B91200B60B00 /* extenstion + Date.swift */,
+				B79442182846D0F800B60B00 /* Reachability.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				B7944203284690C600B60B00 /* HeaderCollectionReusableView.swift in Sources */,
 				B79441FB284686E500B60B00 /* MoreNewsCollectionViewCell.swift in Sources */,
 				B79441DE28465C7000B60B00 /* Constants.swift in Sources */,
+				B79442192846D0F800B60B00 /* Reachability.swift in Sources */,
 				B79441C82846512900B60B00 /* extesnion + reusable.swift in Sources */,
 				B76C9D83284647EA00A04379 /* NewsFeed.xcdatamodeld in Sources */,
 				B76C9D7B284647EA00A04379 /* SceneDelegate.swift in Sources */,

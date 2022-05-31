@@ -6,21 +6,25 @@
 //
 
 import UIKit
-import SVProgressHUD
 
 class NewsFeedViewController: UIViewController {
 
     @IBOutlet weak var newsCollectionView: UICollectionView!
     
-    public enum NewsFeedSection: String, CaseIterable {
+
+     private var NewsFeedDataSource: UICollectionViewDiffableDataSource<NewsFeedSection,Article>?
+     var newsFeedVM: NewsFeedViewModel?
+     var articleList: [Article] = [Article]()
+     var newsFeedCoreDataModel = [News]()
+     let persistence = PersistanceService.shared
+    
+
+     public enum NewsFeedSection: String, CaseIterable {
         case stock = "Stocks"
         case latestNews = "Latest News"
         case moreNews = "More News"
      }
-     
-     private var NewsFeedDataSource: UICollectionViewDiffableDataSource<NewsFeedSection,Article>?
-     var newsFeedVM: NewsFeedViewModel?
-     var articleList: [Article] = [Article]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,19 +36,37 @@ class NewsFeedViewController: UIViewController {
         
         newsFeedVM = NewsFeedViewModel()
 
-        newsFeedVM?.displayNewsFeed(completion: { [weak self] news in
-                 if news != nil {
-                     print(news?.status ?? "")
+        if (Reachability.isConnectedToNetwork()) {
+            newsFeedVM?.displayNewsFeed(completion: { [weak self] news in
+                     if news != nil {
+                         print(news?.status ?? "")
 
-                     self?.articleList = (news?.articles)!
-                     DispatchQueue.main.async {
-                         self?.newsCollectionView.reloadData()
+                         self?.articleList = (news?.articles)!
+                         DispatchQueue.main.async {
+                             self?.newsCollectionView.reloadData()
+                         }
                      }
-                 }
-             })
+                 })
+                } else {
+                    loadNewsFeedFromCoreData()
+                }
+        
+        
+        
+        
     }
     
-    
+    func loadNewsFeedFromCoreData() {
+        
+            persistence.fetch(News.self) { [weak self] (newsFeed) in
+               
+                self?.newsFeedCoreDataModel = newsFeed
+                
+                DispatchQueue.main.async {
+                    self?.newsCollectionView.reloadData()
+                }
+            }
+    }
  
     func generateSnapshot() -> NSDiffableDataSourceSnapshot<NewsFeedSection, Article> {
        var snapshot = NSDiffableDataSourceSnapshot<NewsFeedSection, Article>()

@@ -19,11 +19,14 @@ extension NewsFeedViewController:UICollectionViewDataSource, UICollectionViewDel
         case 1:
             let articles = Array(self.articleList)
             return articles.slice(size: 15).count - 1
-            
         case 2 :
-            let sortedArticleByDate = articleList.sorted(by: {  $0.publishedAt! > $1.publishedAt!} )
-            return sortedArticleByDate.slice(size: 10).count - 1
-           
+            
+            if (Reachability.isConnectedToNetwork()) {
+                let sortedArticleByDate = articleList.sorted(by: {  $0.publishedAt! > $1.publishedAt!} )
+                return sortedArticleByDate.slice(size: 10).count - 1
+            } else {
+                return newsFeedCoreDataModel.slice(size: 10).count - 1
+            }
         default: return 0
         }
     }
@@ -60,12 +63,17 @@ extension NewsFeedViewController:UICollectionViewDataSource, UICollectionViewDel
             guard let cell = newsCollectionView.dequeueReusableCell(withReuseIdentifier: MoreNewsCollectionViewCell.reuseIdentifier, for: indexPath) as? MoreNewsCollectionViewCell else {
                 fatalError("Not found stock cell")
             }
-            let slicedMoreNewsArticle = self.articleList[0...9]
-            let article = Array(slicedMoreNewsArticle)[indexPath.row]
-            print(slicedMoreNewsArticle.count)
-
-            cell.configure(article)
-
+            if (Reachability.isConnectedToNetwork()) {
+                let slicedMoreNewsArticle = self.articleList[0...9]
+                let article = Array(slicedMoreNewsArticle)[indexPath.row]
+                cell.configure(article)
+            } else {
+                let slicedMoreNewsArticle = self.newsFeedCoreDataModel[0...9]
+                let article = Array(slicedMoreNewsArticle)[indexPath.row]
+                cell.titleNews.text = article.titleNews
+                cell.descriptionLbl.text = article.descriptionNews
+                cell.imgNews.imageFromURL(urlString: article.image ?? "")
+            }
             return cell
         }
     }
