@@ -40,6 +40,7 @@
 		B79442082846AEC400B60B00 /* extension + CollectionDataSourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79442072846AEC400B60B00 /* extension + CollectionDataSourceAndDelegate.swift */; };
 		B794420B2846B08700B60B00 /* UIImageView+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B794420A2846B08700B60B00 /* UIImageView+Cache.swift */; };
 		B794420D2846B41F00B60B00 /* extenstion + Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = B794420C2846B41F00B60B00 /* extenstion + Array.swift */; };
+		B794420F2846B91200B60B00 /* extenstion + Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B794420E2846B91200B60B00 /* extenstion + Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		B79442072846AEC400B60B00 /* extension + CollectionDataSourceAndDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension + CollectionDataSourceAndDelegate.swift"; sourceTree = "<group>"; };
 		B794420A2846B08700B60B00 /* UIImageView+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Cache.swift"; sourceTree = "<group>"; };
 		B794420C2846B41F00B60B00 /* extenstion + Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extenstion + Array.swift"; sourceTree = "<group>"; };
+		B794420E2846B91200B60B00 /* extenstion + Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extenstion + Date.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				B79441C42846508900B60B00 /* ReusableView.swift */,
 				B794420A2846B08700B60B00 /* UIImageView+Cache.swift */,
 				B794420C2846B41F00B60B00 /* extenstion + Array.swift */,
+				B794420E2846B91200B60B00 /* extenstion + Date.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				B76C9D83284647EA00A04379 /* NewsFeed.xcdatamodeld in Sources */,
 				B76C9D7B284647EA00A04379 /* SceneDelegate.swift in Sources */,
 				B79442062846AE6C00B60B00 /* extenstion + SectionCollectionViewLayout.swift in Sources */,
+				B794420F2846B91200B60B00 /* extenstion + Date.swift in Sources */,
 				B79441D128465ACE00B60B00 /* NewsFeedViewController.swift in Sources */,
 				B79441E6284672D100B60B00 /* Source.swift in Sources */,
 				B79441ED2846774E00B60B00 /* Article.swift in Sources */,

@@ -23,7 +23,7 @@ struct Article: BaseModel,Hashable {
 
     enum CodingKeys: String, CodingKey {
         case source
-        case articleDescription
+        case articleDescription = "description"
         case publishedAt
         case author, title, url, urlToImage,content
     }

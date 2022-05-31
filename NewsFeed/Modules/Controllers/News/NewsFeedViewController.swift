@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class NewsFeedViewController: UIViewController {
 
     @IBOutlet weak var newsCollectionView: UICollectionView!
@@ -19,11 +20,13 @@ class NewsFeedViewController: UIViewController {
      
      private var NewsFeedDataSource: UICollectionViewDiffableDataSource<NewsFeedSection,Article>?
      var newsFeedVM: NewsFeedViewModel?
-    var articleList: [Article] = [Article]()
+     var articleList: [Article] = [Article]()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      
         newsCollectionView.dataSource = self
         newsCollectionView.delegate = self
         registerCells()
