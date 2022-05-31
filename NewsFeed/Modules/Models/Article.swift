@@ -7,7 +7,11 @@
 
 import Foundation
 // MARK: - Article
-struct Article: BaseModel {
+struct Article: BaseModel,Hashable {
+   
+
+    
+    
     let source: Source
     let author: String?
     let title: String?
@@ -23,4 +27,16 @@ struct Article: BaseModel {
         case publishedAt
         case author, title, url, urlToImage,content
     }
+    
+    
+    public static func == (lhs: Article, rhs: Article) -> Bool {
+         return lhs.title == rhs.title
+     }
+     
+     public func hash(into hasher: inout Hasher) {
+         hasher.combine(title)
+     }
+    
+    
+    
 }

@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsFeedViewController" customModule="NewsFeed" customModuleProvider="target">
             <connections>
+                <outlet property="newsCollectionView" destination="dUg-lt-PzC" id="Hd8-cd-SQC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,14 +18,39 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stock Tickers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTK-aL-5gb">
+                    <rect key="frame" x="20" y="54" width="374" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="41" id="4Yy-Pg-p98"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dUg-lt-PzC">
+                    <rect key="frame" x="0.0" y="105" width="414" height="757"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewLayout key="collectionViewLayout" id="jBB-U8-9WY"/>
+                </collectionView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemPurpleColor"/>
-            <point key="canvasLocation" x="132" y="130"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="FTK-aL-5gb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="2va-TE-AaG"/>
+                <constraint firstItem="dUg-lt-PzC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3Lx-Qb-Kej"/>
+                <constraint firstItem="dUg-lt-PzC" firstAttribute="top" secondItem="FTK-aL-5gb" secondAttribute="bottom" constant="10" id="3ya-Fj-ClX"/>
+                <constraint firstItem="dUg-lt-PzC" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="8l1-8V-maM"/>
+                <constraint firstItem="FTK-aL-5gb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="RGU-in-mIi"/>
+                <constraint firstItem="dUg-lt-PzC" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="g7j-dV-0hb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FTK-aL-5gb" secondAttribute="trailing" constant="20" id="vdq-4A-dL1"/>
+            </constraints>
+            <point key="canvasLocation" x="-314" y="1"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
