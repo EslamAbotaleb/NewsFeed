@@ -8,7 +8,6 @@ target 'NewsFeed' do
   # Pods for NewsFeed
   pod 'RxSwift', '6.5.0'
   pod 'RxCocoa', '6.5.0'
-  pod 'Google-Mobile-Ads-SDK'
   pod 'ReachabilitySwift'
   pod 'Alamofire'
   pod 'SVProgressHUD'
