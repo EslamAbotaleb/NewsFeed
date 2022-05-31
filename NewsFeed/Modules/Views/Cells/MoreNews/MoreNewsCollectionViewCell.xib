@@ -25,7 +25,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="84E-3e-9aM">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="286"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMb-si-DoC">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMb-si-DoC">
                                         <rect key="frame" x="0.0" y="291" width="375" height="39"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <nil key="textColor"/>
@@ -82,7 +82,7 @@
                 <outlet property="imgNews" destination="84E-3e-9aM" id="MnC-Dm-MlV"/>
                 <outlet property="titleNews" destination="AMb-si-DoC" id="ifY-ok-WcF"/>
             </connections>
-            <point key="canvasLocation" x="-264.49275362318843" y="204.24107142857142"/>
+            <point key="canvasLocation" x="-262" y="208"/>
         </collectionViewCell>
     </objects>
 </document>

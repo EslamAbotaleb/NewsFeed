@@ -20,7 +20,6 @@ final class NewsFeedViewModel {
                 if news.element?.articles != nil {
                     completion(news.element)
                     SVProgressHUD.dismiss()
-                   
                 } else {
                     completion(nil)
                 }

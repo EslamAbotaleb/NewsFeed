@@ -35,6 +35,7 @@ class NewsFeedViewController: UIViewController {
         newsFeedVM?.displayNewsFeed(completion: { [weak self] news in
                  if news != nil {
                      print(news?.status ?? "")
+
                      self?.articleList = (news?.articles)!
                      DispatchQueue.main.async {
                          self?.newsCollectionView.reloadData()

@@ -41,6 +41,8 @@
 		B794420B2846B08700B60B00 /* UIImageView+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B794420A2846B08700B60B00 /* UIImageView+Cache.swift */; };
 		B794420D2846B41F00B60B00 /* extenstion + Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = B794420C2846B41F00B60B00 /* extenstion + Array.swift */; };
 		B794420F2846B91200B60B00 /* extenstion + Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B794420E2846B91200B60B00 /* extenstion + Date.swift */; };
+		B79442162846CE9800B60B00 /* News+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79442142846CE9800B60B00 /* News+CoreDataClass.swift */; };
+		B79442172846CE9800B60B00 /* News+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79442152846CE9800B60B00 /* News+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		B794420A2846B08700B60B00 /* UIImageView+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Cache.swift"; sourceTree = "<group>"; };
 		B794420C2846B41F00B60B00 /* extenstion + Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extenstion + Array.swift"; sourceTree = "<group>"; };
 		B794420E2846B91200B60B00 /* extenstion + Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extenstion + Date.swift"; sourceTree = "<group>"; };
+		B79442142846CE9800B60B00 /* News+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "News+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		B79442152846CE9800B60B00 /* News+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "News+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +248,8 @@
 		B79441D928465B4B00B60B00 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				B79442142846CE9800B60B00 /* News+CoreDataClass.swift */,
+				B79442152846CE9800B60B00 /* News+CoreDataProperties.swift */,
 				B76C9D81284647EA00A04379 /* NewsFeed.xcdatamodeld */,
 				B79441DA28465BD300B60B00 /* PersistanceService.swift */,
 			);
@@ -470,6 +476,7 @@
 				B79441C52846508900B60B00 /* ReusableView.swift in Sources */,
 				B79441DB28465BD300B60B00 /* PersistanceService.swift in Sources */,
 				B794420B2846B08700B60B00 /* UIImageView+Cache.swift in Sources */,
+				B79442162846CE9800B60B00 /* News+CoreDataClass.swift in Sources */,
 				B7944203284690C600B60B00 /* HeaderCollectionReusableView.swift in Sources */,
 				B79441FB284686E500B60B00 /* MoreNewsCollectionViewCell.swift in Sources */,
 				B79441DE28465C7000B60B00 /* Constants.swift in Sources */,
@@ -481,6 +488,7 @@
 				B79441D128465ACE00B60B00 /* NewsFeedViewController.swift in Sources */,
 				B79441E6284672D100B60B00 /* Source.swift in Sources */,
 				B79441ED2846774E00B60B00 /* Article.swift in Sources */,
+				B79442172846CE9800B60B00 /* News+CoreDataProperties.swift in Sources */,
 				B79441F7284686D800B60B00 /* StockCollectionViewCell.swift in Sources */,
 				B79441F0284677E100B60B00 /* NewsFeedViewModel.swift in Sources */,
 				B794420D2846B41F00B60B00 /* extenstion + Array.swift in Sources */,

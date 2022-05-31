@@ -23,8 +23,8 @@ class MoreNewsCollectionViewCell: UICollectionViewCell {
         let date = Date()
         self.dateNews.text = date.getFormattedDate(format: article.publishedAt ?? "")
         self.imgNews.imageFromURL(urlString: article.urlToImage ?? "")
-        self.descriptionLbl.numberOfLines = 1
-        self.titleNews.numberOfLines = 1
+//        self.descriptionLbl.numberOfLines = 1
+//        self.titleNews.numberOfLines = 1
 
     }
 }
