@@ -9,28 +9,7 @@ import UIKit
 
 
 extension NewsFeedViewController:UICollectionViewDataSource, UICollectionViewDelegate {
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
-    }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        switch section {
-        case 0: return 4
-        case 1:
-            let articles = Array(self.articleList)
-            return articles.slice(size: 15).count - 1
-        case 2 :
-            
-            if (Reachability.isConnectedToNetwork()) {
-                let sortedArticleByDate = articleList.sorted(by: {  $0.publishedAt! > $1.publishedAt!} )
-                return sortedArticleByDate.slice(size: 10).count - 1
-            } else {
-                return newsFeedCoreDataModel.slice(size: 10).count - 1
-            }
-        default: return 0
-        }
-    }
-    
+ 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard let viewHeader = newsCollectionView.dequeueReusableSupplementaryView(ofKind: "header", withReuseIdentifier: "HeaderCollectionReusableView", for: indexPath) as? HeaderCollectionReusableView else {
           return UICollectionReusableView()
@@ -77,5 +56,26 @@ extension NewsFeedViewController:UICollectionViewDataSource, UICollectionViewDel
             return cell
         }
     }
-
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        switch section {
+        case 0: return 4
+        case 1:
+            let articles = Array(self.articleList)
+            return articles.slice(size: 15).count - 1
+        case 2 :
+            if (Reachability.isConnectedToNetwork()) {
+                let sortedArticleByDate = articleList.sorted(by: {  $0.publishedAt! > $1.publishedAt!} )
+                return sortedArticleByDate.slice(size: 10).count - 1
+            } else {
+                return newsFeedCoreDataModel.slice(size: 10).count - 1
+            }
+        default: return 0
+        }
+    }
+    
 }

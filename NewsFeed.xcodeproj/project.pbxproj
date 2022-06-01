@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		918E03DF83DC2A3047A4C52E /* Pods_NewsFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7867DC8D8AA09CE8E7F1CC01 /* Pods_NewsFeed.framework */; };
+		B7661E0C28478538000D8B86 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7661E0428478533000D8B86 /* Parser.swift */; };
+		B7661E0D28478538000D8B86 /* String+Lines.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7661E0528478534000D8B86 /* String+Lines.swift */; };
+		B7661E0E28478538000D8B86 /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7661E0628478534000D8B86 /* CSV.swift */; };
+		B7661E0F28478538000D8B86 /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7661E0728478535000D8B86 /* Description.swift */; };
+		B7661E1028478538000D8B86 /* ParsingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7661E0828478536000D8B86 /* ParsingState.swift */; };
+		B7661E1128478538000D8B86 /* CSV+DelimiterGuessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7661E0928478537000D8B86 /* CSV+DelimiterGuessing.swift */; };
+		B7661E1228478538000D8B86 /* NamedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7661E0A28478538000D8B86 /* NamedView.swift */; };
 		B76C9D79284647EA00A04379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76C9D78284647EA00A04379 /* AppDelegate.swift */; };
 		B76C9D7B284647EA00A04379 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76C9D7A284647EA00A04379 /* SceneDelegate.swift */; };
 		B76C9D7D284647EA00A04379 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76C9D7C284647EA00A04379 /* ViewController.swift */; };
@@ -50,6 +57,13 @@
 		5037FC5C7DD302457368A40E /* Pods-NewsFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsFeed.debug.xcconfig"; path = "Target Support Files/Pods-NewsFeed/Pods-NewsFeed.debug.xcconfig"; sourceTree = "<group>"; };
 		7867DC8D8AA09CE8E7F1CC01 /* Pods_NewsFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91727039CC5501E0D4BAF7C1 /* Pods-NewsFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsFeed.release.xcconfig"; path = "Target Support Files/Pods-NewsFeed/Pods-NewsFeed.release.xcconfig"; sourceTree = "<group>"; };
+		B7661E0428478533000D8B86 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		B7661E0528478534000D8B86 /* String+Lines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Lines.swift"; sourceTree = "<group>"; };
+		B7661E0628478534000D8B86 /* CSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSV.swift; sourceTree = "<group>"; };
+		B7661E0728478535000D8B86 /* Description.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Description.swift; sourceTree = "<group>"; };
+		B7661E0828478536000D8B86 /* ParsingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsingState.swift; sourceTree = "<group>"; };
+		B7661E0928478537000D8B86 /* CSV+DelimiterGuessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CSV+DelimiterGuessing.swift"; sourceTree = "<group>"; };
+		B7661E0A28478538000D8B86 /* NamedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamedView.swift; sourceTree = "<group>"; };
 		B76C9D75284647EA00A04379 /* NewsFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76C9D78284647EA00A04379 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B76C9D7A284647EA00A04379 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +125,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B7661E0228478522000D8B86 /* CSV */ = {
+			isa = PBXGroup;
+			children = (
+				B7661E0628478534000D8B86 /* CSV.swift */,
+				B7661E0928478537000D8B86 /* CSV+DelimiterGuessing.swift */,
+				B7661E0728478535000D8B86 /* Description.swift */,
+				B7661E0A28478538000D8B86 /* NamedView.swift */,
+				B7661E0428478533000D8B86 /* Parser.swift */,
+				B7661E0828478536000D8B86 /* ParsingState.swift */,
+			);
+			path = CSV;
+			sourceTree = "<group>";
+		};
 		B76C9D6C284647EA00A04379 = {
 			isa = PBXGroup;
 			children = (
@@ -158,7 +185,9 @@
 			isa = PBXGroup;
 			children = (
 				B79441C62846509500B60B00 /* CollectionView */,
+				B7661E0228478522000D8B86 /* CSV */,
 				B79441C42846508900B60B00 /* ReusableView.swift */,
+				B7661E0528478534000D8B86 /* String+Lines.swift */,
 				B794420A2846B08700B60B00 /* UIImageView+Cache.swift */,
 				B794420C2846B41F00B60B00 /* extenstion + Array.swift */,
 				B794420E2846B91200B60B00 /* extenstion + Date.swift */,
@@ -471,11 +500,14 @@
 			files = (
 				B76C9D7D284647EA00A04379 /* ViewController.swift in Sources */,
 				B76C9D79284647EA00A04379 /* AppDelegate.swift in Sources */,
+				B7661E0C28478538000D8B86 /* Parser.swift in Sources */,
 				B79441E82846730C00B60B00 /* BaseModel.swift in Sources */,
 				B79441EA2846734900B60B00 /* NewsFeed.swift in Sources */,
 				B79441C32846506800B60B00 /* exetension + collectionviewcell.swift in Sources */,
+				B7661E0F28478538000D8B86 /* Description.swift in Sources */,
 				B79442082846AEC400B60B00 /* extension + CollectionDataSourceAndDelegate.swift in Sources */,
 				B79441E128465CC000B60B00 /* Resource.swift in Sources */,
+				B7661E1128478538000D8B86 /* CSV+DelimiterGuessing.swift in Sources */,
 				B79441C52846508900B60B00 /* ReusableView.swift in Sources */,
 				B79441DB28465BD300B60B00 /* PersistanceService.swift in Sources */,
 				B794420B2846B08700B60B00 /* UIImageView+Cache.swift in Sources */,
@@ -483,7 +515,9 @@
 				B7944203284690C600B60B00 /* HeaderCollectionReusableView.swift in Sources */,
 				B79441FB284686E500B60B00 /* MoreNewsCollectionViewCell.swift in Sources */,
 				B79441DE28465C7000B60B00 /* Constants.swift in Sources */,
+				B7661E1028478538000D8B86 /* ParsingState.swift in Sources */,
 				B79442192846D0F800B60B00 /* Reachability.swift in Sources */,
+				B7661E0E28478538000D8B86 /* CSV.swift in Sources */,
 				B79441C82846512900B60B00 /* extesnion + reusable.swift in Sources */,
 				B76C9D83284647EA00A04379 /* NewsFeed.xcdatamodeld in Sources */,
 				B76C9D7B284647EA00A04379 /* SceneDelegate.swift in Sources */,
@@ -493,6 +527,8 @@
 				B79441E6284672D100B60B00 /* Source.swift in Sources */,
 				B79441ED2846774E00B60B00 /* Article.swift in Sources */,
 				B79442172846CE9800B60B00 /* News+CoreDataProperties.swift in Sources */,
+				B7661E0D28478538000D8B86 /* String+Lines.swift in Sources */,
+				B7661E1228478538000D8B86 /* NamedView.swift in Sources */,
 				B79441F7284686D800B60B00 /* StockCollectionViewCell.swift in Sources */,
 				B79441F0284677E100B60B00 /* NewsFeedViewModel.swift in Sources */,
 				B794420D2846B41F00B60B00 /* extenstion + Array.swift in Sources */,

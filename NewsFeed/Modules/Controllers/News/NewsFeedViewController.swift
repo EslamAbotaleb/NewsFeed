@@ -50,8 +50,8 @@ class NewsFeedViewController: UIViewController {
                 } else {
                     loadNewsFeedFromCoreData()
                 }
-        
-        
+    
+      
         
         
     }
