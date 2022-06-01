@@ -25,12 +25,17 @@ extension NewsFeedViewController:UICollectionViewDataSource, UICollectionViewDel
         switch sectionType {
 
         case .stock:
+            
             guard let cell = newsCollectionView.dequeueReusableCell(withReuseIdentifier: StockCollectionViewCell.reuseIdentifier, for: indexPath) as? StockCollectionViewCell else {
                 fatalError("Not found stock cell")
             }
-            cell.backgroundColor = .red
+            let stockPrice = stockSticker!.price[indexPath.row]
+            let stockName = stockSticker!.stock[indexPath.row]
+            cell.configure(stockName,stockPrice)
             return cell
+            
         case .latestNews:
+            
             guard let cell = newsCollectionView.dequeueReusableCell(withReuseIdentifier: LatestNewsCollectionViewCell.reuseIdentifier, for: indexPath) as? LatestNewsCollectionViewCell else {
                 fatalError("Not found stock cell")
             }
@@ -38,7 +43,9 @@ extension NewsFeedViewController:UICollectionViewDataSource, UICollectionViewDel
             let article = Array(slicedLatestNewsArticle)[indexPath.row]
             cell.configure(article)
             return cell
+            
         case .moreNews:
+            
             guard let cell = newsCollectionView.dequeueReusableCell(withReuseIdentifier: MoreNewsCollectionViewCell.reuseIdentifier, for: indexPath) as? MoreNewsCollectionViewCell else {
                 fatalError("Not found stock cell")
             }
@@ -54,6 +61,7 @@ extension NewsFeedViewController:UICollectionViewDataSource, UICollectionViewDel
                 cell.imgNews.imageFromURL(urlString: article.image ?? "")
             }
             return cell
+            
         }
     }
     
@@ -63,7 +71,9 @@ extension NewsFeedViewController:UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
-        case 0: return 4
+        case 0:
+            
+            return self.stockSticker!.price.count
         case 1:
             let articles = Array(self.articleList)
             return articles.slice(size: 15).count - 1

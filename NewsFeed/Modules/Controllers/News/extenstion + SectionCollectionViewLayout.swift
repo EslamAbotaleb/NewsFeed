@@ -75,4 +75,20 @@ extension NewsFeedViewController {
         return section
         
     }
+    
+    func setupCollectionViewLayout() -> UICollectionViewLayout {
+       let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+          
+          let movieSections = NewsFeedSection.allCases[sectionIndex]
+          switch movieSections {
+          case .stock: return self.createStockSection()
+          case .latestNews: return self.createLatestNewsSection()
+          case .moreNews: return self.createMoreNewsSection()
+
+          }
+       }
+       return layout
+    }
+    
 }
+
