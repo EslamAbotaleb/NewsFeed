@@ -67,5 +67,20 @@ final class NewsFeedViewModel {
            }.resume()
            
        }
+    
+    //csv
+    func loadCSV(completion: @escaping(StockTicker?) -> ()) {
+        do {
+            let csv: CSV = try CSV(url: URL(string: ConstantURL.stockCSV)!)
+               let encoder = JSONEncoder()
+               if let jsonData = try? encoder.encode(csv.namedColumns) {
+                 let stockSticker = try JSONDecoder().decode(StockTicker.self, from: jsonData)
+                   completion(stockSticker)
+               }
+           } catch {
+               print("errorerror\(error)")
+
+           }
+    }
 }
 

@@ -17,7 +17,7 @@ class NewsFeedViewController: UIViewController {
      var articleList: [Article] = [Article]()
      var newsFeedCoreDataModel = [News]()
      let persistence = PersistanceService.shared
-    
+     var stockSticker: StockTicker?
 
      public enum NewsFeedSection: String, CaseIterable {
         case stock = "Stocks"
@@ -25,7 +25,7 @@ class NewsFeedViewController: UIViewController {
         case moreNews = "More News"
      }
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,12 +50,13 @@ class NewsFeedViewController: UIViewController {
                 } else {
                     loadNewsFeedFromCoreData()
                 }
-    
-      
-        
+        //csv
+        newsFeedVM?.loadCSV(completion: { stockSticker in
+            print("Get Price\(stockSticker?.price.count)")
+        })
         
     }
-    
+
     func loadNewsFeedFromCoreData() {
         
             persistence.fetch(News.self) { [weak self] (newsFeed) in
@@ -101,8 +102,7 @@ extension NewsFeedViewController {
        
     }
     
-    
-    
+
     func setupCollectionViewLayout() -> UICollectionViewLayout {
        let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
           

@@ -9,6 +9,6 @@ import Foundation
 
 struct ConstantURL {
     static let baseUrl = "https://saurav.tech/NewsAPI/everything/cnn.json"
-
+    static let stockCSV = "https://raw.githubusercontent.com/dsancov/TestData/main/stocks.csv"
 }
 
